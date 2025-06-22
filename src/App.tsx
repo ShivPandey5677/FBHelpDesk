@@ -49,7 +49,7 @@ const AppRoutes: React.FC = () => {
           </ProtectedRoute>
         } 
       />
-      <Route path="/" element={<Navigate to="/conversations" />} />
+      <Route path="/" element={<Navigate to="/login" />} />
     </Routes>
   );
 };
