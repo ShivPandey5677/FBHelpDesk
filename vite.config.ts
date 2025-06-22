@@ -12,7 +12,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://r-panel-f-help-df5w.vercel.app/',
+        target: 'https://r-panel-f-help-df5w.vercel.app/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
