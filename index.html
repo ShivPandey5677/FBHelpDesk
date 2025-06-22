@@ -9,5 +9,16 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Fallback for production -->
+    <script>
+      window.addEventListener('load', () => {
+        if (!document.querySelector('[data-react-root]')) {
+          const root = document.createElement('div');
+          root.id = 'root';
+          document.body.appendChild(root);
+          import('/src/main.tsx');
+        }
+      });
+    </script>
   </body>
 </html>
