@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/main.tsx"></script>
     <!-- Fallback for production -->
     <script>
       window.addEventListener('load', () => {
@@ -16,7 +16,7 @@
           const root = document.createElement('div');
           root.id = 'root';
           document.body.appendChild(root);
-          import('/src/main.tsx');
+          import('/main.tsx');
         }
       });
     </script>
